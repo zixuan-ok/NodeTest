@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const promise = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         console.log("setTimeout()");
+        //         // console.log(333);
+        //         // resolve('a数据');
+        //         reject("失败了~");
+        //     }, 1000);
+        // });
+        // //链式调用
+        // promise.then(
+        //     (result) => { // 成功的回调
+        //         // 当promise对象的状态变成resolved，就会执行当前函数
+        //         // console.log("resolved 111");
+        //         console.log(result);
+        //     },
+        // ).catch(
+        //     (error) => { // 失败的回调
+        //         // 当promise对象的状态变成rejected，就会执行当前函数
+        //         // console.log("rejected 111");
+        //         console.log(error);
+        //     }
+        // )
+
+        const promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("setTimeout()");
+                // console.log(333);
+                resolve('yes')
+                // reject("失败了~");
+            }, 1000);
+        });
+        promise.then(
+            (result) => { // 成功的回调
+                // 当promise对象的状态变成resolved，就会执行当前函数
+                // console.log("resolved 111");
+                console.log(result);
+
+                // 报错
+                // reject('on')//没有定义这个形参
+                // resolve('ok')
+                // console.log(a);
+
+
+                // return Promise.reject('on')
+                // return "then";
+            }
+        )
+            .then(
+                (result) => {
+                    console.log(111);
+                    // console.log(result)
+                },
+            )
+            .catch(
+                (a) => {
+                    console.log(a);
+                }
+            )
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 
+        Object.defineProperties修改属性
+        */
+        var obj8 = {
+            name: 'xiaowang'
+        }
+        Object.defineProperty(obj8, 'sex', {
+            value: 'nv',
+            enumerable:true
+        })
+        Object.defineProperty(obj8, "name", {
+            value: "zixuan",
+        });
+        console.log(obj8);
+        for(var i in obj8){
+         console.log(i);
+        }
+    </script>
+</body>
+
+</html>

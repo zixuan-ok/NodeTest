@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+          width: 100px;
+          height: 100px;
+          background-color: red;
+        }
+      </style>
+</head>
+<body>
+    <div id="box" style="border: 10px solid blue"></div>
+    <SCript src="jquery-1.12.4.min.js"></SCript>
+    <SCript>
+         var box=document.getElementById('box')
+        //  通过JS原生获取style样式
+       console.log(getComputedStyle(box).border);
+    </SCript>
+</body>
+</html>

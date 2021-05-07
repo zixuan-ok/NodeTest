@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .abc {
+            border: 2px solid red;
+            height: 30px;
+            width: 20px;
+            background-color: pink
+        }
+    </style>
+</head>
+
+<body>
+    <div class="abc"></div>
+    <script>
+        // function fn2(a,b='c'){
+        //     console.log(a,b);
+        // }
+        // fn2("hello")
+        // fn3(1, 2, 3, 4, 5, 6)
+        // function fn3(...str) {
+        //     console.log(str);
+        // }
+
+        // // 箭头函数
+        // let f1 = b => console.log(b)//只有一句话的时候，（）和{}都不用写
+        // f1(1)
+
+        // {
+        //     let arr = [1, 2, 3, 4, 5]
+        //     // 只有一句话的回调函数
+        //     let re = arr.find(item => item === 9)
+        //     console.log(re);
+
+        //     let res = arr.find(function (item) {
+        //         return item === 4
+        //     })
+        //     console.log(res);
+
+
+        // }
+
+        {
+            // 没有形参的函数
+            // let f3=()=>console.log(12);
+            // f3()
+
+        }
+        {
+            /* 
+            箭头函数注意事项：没有自己的this
+            */
+            let oAbc = document.querySelector('.abc')
+            // oAbc.onclick = function () {
+            //     console.log(this);
+            // }
+            // oAbc.onclick=()=>console.log(this)//window
+
+            // oAbc.onclick=function(){
+            //     console.log(this);
+            //     let f=()=>{
+            //         console.log(this);
+            //     }
+            //     f()
+            // }
+            // oAbc.onclick=()=>{
+            //     console.log(this);
+            //     let f=()=>console.log(this)
+            //     f()
+            // }
+        }
+        {
+            // let f2=()=>{}
+            // new f2()
+            // let f3=()=>console.log(arguments);
+            // let f3=function(){
+            //     console.log(arguments);
+            // }
+            // f3()
+        }
+    </script>
+</body>
+
+</html>

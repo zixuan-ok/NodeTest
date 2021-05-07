@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //用arr的reduce方法    输出arr所有元素累加的结果
+        var arr = [1, 5, 8, 4, 2]
+        var re = arr.reduce(function (pre, item, index) {
+            // console.log(pre);
+            // console.log(item);
+            return pre += item
+        }, 0)
+        console.log(re);
+
+    </script>
+</body>
+
+</html>

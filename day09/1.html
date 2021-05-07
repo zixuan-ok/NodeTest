@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Person {
+            constructor(name, age) {
+                //  相当于Person 构造函数里的内容
+                this.name = name
+                this.age = age
+            }
+            sex = 'nan'
+            // sayhi() {
+            //     console.log('我是' + this.name)
+            //     //   相当于直接加到了原型上
+            // }
+            sayhi = () => {
+                console.log(this.sex);
+            }
+        }
+        class Student extends Person {
+            constructor(name, age, score) {
+                super(name, age)//写在第一行，继承父级的属性方法和原型方法
+                this.score = score
+            }
+        }
+        let p1 = new Person('zs', 18)
+        let str1 = new Student('zv', 22, 100)
+        console.log(p1);
+        console.log(str1);
+        p1.sayhi()
+        str1.sayhi()
+    </script>
+</body>
+
+</html>

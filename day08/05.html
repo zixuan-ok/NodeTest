@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let promise = new Promise(function (resolve, reject) {
+            // console.log(a);
+            setTimeout(() => {
+                // console.log(a) 在里面出错，promise的状态没有被修改
+                let data = [1, 2, 3]
+                // console.log(data);//可以执行
+                resolve(data)
+            }, 1000)
+        })
+        console.log(promise);
+
+        promise.then(
+            (data) => {
+                console.log('ok', data)
+                return new Promise(function(a,b){
+                    a('okk')
+                })
+            },
+            (err) => {
+                console.log('no', err);
+            }
+        )
+            .then(
+                (data) => {
+                    console.log('ok', data);
+                },
+                (err) => {
+                    console.log('no', err);
+                }
+            )
+            .then(
+                (data) => {
+                    console.log('ok', data);
+                },
+                (err) => {
+                    console.log('no', err);
+                }
+            )
+
+    </script>
+</body>
+
+</html>

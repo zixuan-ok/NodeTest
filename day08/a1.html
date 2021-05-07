@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Object新增的静态方法，用来定义实例对象
+        // Object.create
+        // var obj1 = {}
+        // console.log(obj1);
+        // var obj2 = Object.create(obj1)//第一个参数确定类型
+        // console.log(obj2);
+        // console.log(obj2.name);
+        var fn1=function (){
+            console.log('123F');
+        }
+
+        var obj3 = Object.create(fn1, {
+            name: {
+                value: 'xiaowang',
+                // writable: true,//控制属性是否可改写
+                // enumerable: true,//是否可以遍历
+                // configurable: true
+            },
+            sex: {
+                value: 'nv'
+            }
+        })
+        // console.log(obj3);
+        // console.log(obj3.name);
+        // console.log(obj3.sex);
+        obj3.name = 'meinv'
+        // console.log(obj3.name);//writable控制属性是否可改写
+        // obj3.sex = 'nan'
+        // console.log(obj3.sex);//改不了
+
+        // for (var key in obj3) {
+        //     console.log(key);
+        // }
+ 
+        delete obj3.name
+        // obj3.name=""
+        console.log(obj3.name);
+        console.log(obj3);
+
+        // var a= new obj3('123','456')
+        // console.log(a);
+    </script>
+</body>
+
+</html>

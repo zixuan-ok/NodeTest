@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    span {
+      display: block;
+      width: 100px;
+      height: 30px;
+      background-color: pink;
+    }
+
+    #box {
+      border: 10px solid blueviolet
+    }
+  </style>
+</head>
+
+<body>
+  <div id="box">
+    <span id="span">我是span</span>
+  </div>
+  <p>这是一个p</p>
+  <div id="box2"></div>
+
+  <script src="jquery-1.12.4.min.js"></script>
+  <script>
+    // html格式
+    $('#box').append('<h1>我是标题一</h1>')
+    // 创造一个标签，dom对象
+    var h2 = document.createElement('h2')
+    h2.textContent = "lalala"
+    $('#box').append(h2)
+    // jQuery对象
+    $('#box').append($('<h1>哈哈哈哈</h1>'))
+    // append的切换功能
+    $('#box').append($('p'))
+    $('#box').prepend($('p'))
+    // $('#box').after($('span'))
+
+    // html添加方式
+    // $('#box').html('<h3>12345</h3>')
+    // // $('#box').html('')
+    // //  清空自己
+    // $('#box').empty()
+
+    // 克隆
+    var box = document.getElementById('box')
+    var box2 = document.getElementById('box2')
+    var span = document.getElementById('span')
+    $(span).click(function () {
+      console.log('123');
+    })
+    $('#box').click(function () {
+      console.log('div')
+    })
+    // JS原生克隆
+    // console.log(span);
+    // var cloneSpan = span.cloneNode()
+    // console.log(cloneSpan)
+    // box2.appendChild(cloneSpan)
+
+    // jQuery克隆
+    $('#box2').append($('#box').clone())
+  </script>
+</body>
+
+</html>

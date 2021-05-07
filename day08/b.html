@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Person {
+            constructor(name, age) {
+                // 添加在构造函数上，属性上加实例
+                this.na                                                                                                                  
+                this.age = age
+            }
+            sayhai() {
+                console.log('你好我是'+ this.name);
+            }
+        }
+
+        class Student extends Person {
+            constructor(name, age, score) {
+                super(name, age)
+                // console.log(super());
+                this.score = score
+            }
+
+        }
+        let p1 = new Person('zs', 18)
+        let st1 = new Student('ls', 20, 100)
+        console.log(p1)
+        console.log(st1)
+        console.log(p1.name)
+        p1.sayhai()
+        st1.sayhai()
+    </script>
+</body>
+
+</html>

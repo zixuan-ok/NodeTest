@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <SCript>
+        // 数组解构
+        // let [a, b, c, d, e] = [1, [2, 3, 4], 5]
+        // console.log(a, b, c, d, e);
+
+        // let [hoo = 2, foo = hoo] = [];
+        // console.log(foo, hoo)
+
+        // 对象解构
+        // let a = 1, b = 2;
+        // console.log({ c: a, b: b })
+        // console.log({ a: a, b: b }) 第二个a是变量
+        // console.log({ a, b });
+
+        // let { foo: c, hoo: d } = { foo: 1, hoo: 2 }
+        // 作用：更改变量值，把foo里的东西给变量c，并且把foo这个变量名空出来，这时候foo可以赋值 let foo=2
+        // let { c: foo, d: hoo } = { foo: 1, hoo: 2 }
+        // 在右边的对象里找c和d属性，找不到，只能找到foo和hoo属性
+        // console.log(foo, hoo);
+        // console.log(c, d)//报错
+
+        // let { x, y = 10 } = { x: 1 ,y:2}
+        // console.log(x,y);
+
+        // function fn(){
+        //     return [1,2,3,4]
+        // }
+        // let [a,b,c,d]=fn()
+        // console.log(a,b,c,d);
+
+        // function fn() {
+        //     return { foo: 'hello', hoo: 'word' }
+        // }
+        // let { foo } = fn()
+        // console.log(foo)
+
+        // function fn1([x, y, z]) {
+        //     console.log(x, y, z);
+        // }
+        // fn1([1, 2, 3])
+
+        // function fn2({ x, y, z }) {
+        //     console.log(x, y, z);
+        // }
+        // fn2({ y: 1, x: 1, z: 3 })
+
+        // 数组扩展 reduce
+        var arr = ['a', 'b', 'c']
+        var obj = arr.reduce(function (pre, item, index) {
+            pre[item] = index
+            return pre
+        }, {})
+        console.log(obj);
+    </SCript>
+</body>
+
+</html>
